@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
 
     Rigidbody rb;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +78,14 @@ public class PlayerMove : MonoBehaviour
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pill"))
+        {
+            audioSource.Play();
         }
     }
 
