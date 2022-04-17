@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sleep.unity
     guid: 4d1039172f2353943bce35cc8c588225
+  - enabled: 1
+    path: Assets/Scenes/Exodus.unity
+    guid: 5781b843ab690ce43831fdbb4e2e3695
   m_configObjects: {}
